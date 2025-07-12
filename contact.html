@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="contact.css">
+    <title>Document</title>
+</head>
+<body>
+   
+  <!-- Navbar -->
+  <nav>
+  <a href="#" class="logo">MY TILES</a>
+
+  <span class="toggle-btn" onclick="toggleMenu()">☰</span>
+
+  <ul class="menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li class="dropdown">
+      <a href="#">Tiles Categories ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="kitchen.html">Kitchen Tiles</a></li>
+        <li><a href="washroom.html">Washroom Tiles</a></li>
+        <li><a href="galler.html">Gallery Tiles</a></li>
+        <li><a href="faloor.html">Floor Tiles</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="search-bar">
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="ubaid" type="submit">Search</button>
+      </form>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  }
+</script>
+
+
+
+<div class="hero-overlay-text">
+</div>
+
+</section>
+
+<div class="contact-container">
+  <h2><em>Contact Us</em></h2>
+  <form id="contact-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <input type="text" id="phone" placeholder="Your Phone" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <div id="form-message"></div>
+</div>
+
+<script>
+  // ✅ Corrected JavaScript targeting the form
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Stop actual form submission
+
+    // Show alert message
+    alert("Successfully Message  ");
+
+    // Reset the form
+    this.reset();
+
+    // Optional: Show confirmation message in page too
+    document.getElementById("form-message").textContent = "";
+    document.getElementById("form-message").style.color = "green";
+    document.getElementById("form-message").style.marginTop = "10px";
+  });
+</script>
+
+
+
+
+
+<!-- 
+
+ <div class="hero-overlay-text">
+    
+  </div>
+</section>
+    <div class="contact-container">
+        <h2><em>Contact Us</em></h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <input type="text" id="phone" placeholder="Your Phone">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="form-message"></div>
+    </div>
+
+
+<script> -->
+
+  
+    <!-- // JavaScript code to handle form and show alert
+    document.getElementById("contact-container").addEventListener("submit", function(e) {
+      e.preventDefault(); // Stop actual form submission
+      
+      // Show alert message
+      alert("Thank you! Your message has been sent.");
+      
+      // Optionally, reset the form
+      this.reset();
+    }); -->
+
+
+
+
+</script>
+
+<h1 class="live7"> Contact Us My Tiles Pakistam</h1>
+<p class="live8">Looking to connect with us? Whether you have questions about our premium tiles, need assistance with your order, or want expert advice for your home or office project,<br> we’re here to help! Our team at My Tiles is always ready to guide you with the best solutions for your tiling needs.<br>
+
+Reach out to us through call, WhatsApp, or email, and our friendly customer support will get back to<br> you as soon as possible. You can also visit our showroom to explore our beautiful collection of floor, kitchen, bathroom, and outdoor tiles in person.<br>
+
+Don’t hesitate — contact us now and let’s build something beautiful together!
+
+</p>
+    
+
+<footer class="main-footer">
+  <div class="main-footer-container">
+
+    <div class="footer-col">
+      <h3>MyTiles</h3>
+      <p>Leading provider of premium tiles for kitchen, washroom, bedroom, and flooring.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="kitchen.html">Kitchen</a></li>
+        <li><a href="washroom.html">Washroom</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="galler.html">Gallery</a></li>
+        <li><a href="faloor.html">Floor Tiles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+         <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</li>
+        <li><i class="fas fa-envelope"></i>ubaidnawal857@gmail.com</li>
+        <li><i class="fas fa-phone"></i> 03141001807</li>
+        <li><i class="fas fa-clock"></i> Mon - Sat: 9am - 7pm</li>
+      </ul>
+    </div>
+
+   <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    
+  <div class="footer-bottom">
+    <p>© 2025 MyTiles. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>

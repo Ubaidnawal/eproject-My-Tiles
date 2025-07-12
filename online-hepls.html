@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+ <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+
+    .support-section {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #111;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 191, 166, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .support-section:hover {
+      transform: scale(1.02);
+    }
+
+    .support-section h2 {
+      text-align: center;
+      color: #00bfa6;
+      margin-bottom: 20px;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #00bfa6;
+      border-radius: 8px;
+      background: #000;
+      color: #fff;
+      font-size: 16px;
+      transition: 0.3s ease;
+    }
+
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: #fff;
+      background: #111;
+    }
+
+    form button {
+      background: #00bfa6;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    form button:hover {
+      background: #fff;
+      color: #00bfa6;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .support-section {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="support-section">
+    <h2><i class="fas fa-headset"></i> Online Help & Support</h2>
+    <form id="support-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="text" id="subject" placeholder="Subject" required>
+      <textarea id="message" rows="5" placeholder="Type your message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('support-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !subject || !message) {
+        alert("❗ Please fill in all fields before submitting.");
+        return;
+      }
+
+      alert("✅ Your message has been sent successfully!\nWe'll get back to you shortly.");
+      form.reset();
+    });
+  </script>
+
+
+</body>
+</html>

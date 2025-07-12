@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Money Back Guarantee Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    .guarantee-form {
+      max-width: 650px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #111;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 191, 166, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .guarantee-form:hover {
+      transform: scale(1.01);
+    }
+
+    .guarantee-form h2 {
+      color: #00bfa6;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .guarantee-form input,
+    .guarantee-form textarea,
+    .guarantee-form select,
+    .guarantee-form button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #000;
+      color: #fff;
+      border: 1px solid #00bfa6;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .guarantee-form input:focus,
+    .guarantee-form textarea:focus,
+    .guarantee-form select:focus {
+      outline: none;
+      background: #111;
+      border-color: #fff;
+    }
+
+    .guarantee-form button {
+      background: #00bfa6;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .guarantee-form button:hover {
+      background: #fff;
+      color: #00bfa6;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .guarantee-form {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="guarantee-form">
+    <h2><i class="fas fa-undo-alt"></i> Money Back </h2>
+    <form id="refundForm">
+      <input type="text" id="name" placeholder="Your Full Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="text" id="phone" placeholder="Your Phone Number" required>
+      
+      <select id="reason" required>
+        <option value="">-- Select Reason --</option>
+        <option value="defective">Defective Tiles</option>
+        <option value="wrong">Wrong Order Received</option>
+        <option value="damaged">Damaged on Delivery</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <textarea id="details" rows="5" placeholder="Explain the issue in detail..." required></textarea>
+      
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+  <script>
+    const refundForm = document.getElementById("refundForm");
+
+    refundForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const reason = document.getElementById("reason").value;
+      const details = document.getElementById("details").value.trim();
+
+      if (!name || !email || !phone || !reason || !details) {
+        alert("❗ Please fill out all fields to continue.");
+        return;
+      }
+
+      alert("✅ Your request has been submitted successfully!\nOur support team will contact you soon.");
+      refundForm.reset();
+    });
+  </script>
+
+</body>
+</html>
